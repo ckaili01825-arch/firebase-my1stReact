@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff9d;
+    z-index: 99;
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar a{
+    color: #000;
+}
+.navbar a:hover{
+    color: #00000093;
+}
+

@@ -1,0 +1,42 @@
+.container{
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgb(179, 255, 253) 0px, rgb(227, 230, 255) 50%, rgb(253, 229, 245) 100%);
+}
+.container-bg{
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.container-bg-parallax{
+    width: 100%;
+    height: 100%;;
+    position: absolute;
+    top:0;
+}
+.container-bg-parallax__layer{
+    width: 100%;
+    height:100%;
+    background-size: 100% auto;
+    background-position: center 0;
+    will-change: transform;/*
+    作用：
+    告訴瀏覽器：這個元素之後會位移或動畫，請優先做好準備
+    讓動畫更順、不會掉幀或 lag
+    ⚠️ 注意：不要濫用 will-change
+    */
+}
+.container-bg-parallax.layer-1 .container-bg-parallax__layer{
+    background-image: url('../../assets/bg_parallax01_pc.png.webp');
+}
+.container-bg-parallax.layer-2 .container-bg-parallax__layer{
+    background-image: url('../../assets/bg_parallax02_pc.png.webp');
+}
+.container-bg-parallax.layer-3 .container-bg-parallax__layer{
+    background-image: url('../../assets/bg_parallax03_pc.png.webp');
+}

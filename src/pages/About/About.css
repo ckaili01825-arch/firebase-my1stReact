@@ -1,0 +1,220 @@
+
+.about-container{
+    padding:50px 0 50px 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgb(179, 255, 253) 0px, rgb(227, 230, 255) 50%, rgb(253, 229, 245) 100%);
+}
+
+.resume{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+    /*align-items: stretch;*/
+    padding:0px 20px;
+
+}
+@media screen and (max-width: 768px) {
+    .resume{
+        display: flex;
+        flex-direction: column;
+        padding:0px 10px;
+    }
+}
+
+.resume-row{
+    padding: 0 1%;
+}
+.resume-row1{
+    width: 25%;
+    box-sizing: border-box;
+}
+.resume-row2{
+    width: 45%;
+    box-sizing: border-box;
+}
+.resume-row3{
+    width: 30%;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+    .resume-row1{
+        width: 100%;
+    }
+    .resume-row2{
+        width: 100%;
+    }
+    .resume-row3{
+        width: 100%;
+    }
+}
+.resume-row1 > .sticky-wrapper {
+  position: sticky;
+  top:65px;
+}
+.resume-row3 > .sticky-wrapper {
+  position: sticky;
+  top: 65px;
+}
+.resume-profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resume-profile-container .profile-text-container{
+    margin: 15px 0 10px 0;
+    width: 100%;
+    text-align: center;
+     font-family: 'Outfit', sans-serif;
+     letter-spacing: 1.5px;
+}
+.resume-profile-container .profile-text-container p:nth-of-type(1){
+    font-size: 30px;
+    font-weight: 600;
+}
+.resume-profile-container .profile-text-container p:nth-of-type(2){
+    font-size: 16px;
+    color: #525252;
+    letter-spacing: 3px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .resume-profile-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .resume-profile-container .profile-text-container{
+         margin: 0 0 0 50px;
+         text-align: left;
+    }
+
+    .resume-profile-container .profile-text-container p:nth-of-type(1){
+        font-size: 5vw;
+    }
+    .resume-profile-container .profile-text-container p:nth-of-type(2){
+        font-size: 2.5vw;
+    }
+}
+.resume-profile-photo--frame{
+    background-color: #ffffff6b;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    max-width: 180px;
+    width: 100%;
+    box-sizing: border-box;
+     
+}
+.resume-profile-photo{
+    /*
+    background-color: rgb(96, 155, 155);
+    */
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url('../../assets/profile-pic.avif');
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.resume-info-container{
+    background-color: rgba(255, 255, 255, 0.596);
+    width: 100%;
+    padding: 20px 20px;
+    margin: 15px 0;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.resume-skill-box{
+    display: block;
+    padding: 0 0 0 10px;
+}
+.resume-skill-list{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 15px 0;
+}
+
+
+.resume p, .resume li{
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.8px;
+    font-size: 16px;
+}
+.resume ul{
+    margin: 5px 0;
+    list-style: none;
+    padding-inline-start: 30px;
+}
+.resume .resume-experience-list li{
+    margin: 10px 0;
+}
+.resume .resume-skill-list ul{
+    list-style: none;
+    padding-inline-start: 0px;
+    width: 49%;
+}
+
+
+
+.resume .resume-title{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin: 0 0 3px 0;
+}
+
+.resume .resume-subtitle{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.resume .resume-grey-text{
+    color: #9d9d9d;
+     font-size: 14px;
+}
+.resume .resume-smaller-text{
+     font-size: 14px;
+}
+.resume .resume-paragraph{
+    text-align: justify;
+}
+
+.resume .clipped-box{
+  width: 80%;
+  aspect-ratio:4/3;
+  background-color: rgb(192, 192, 192);
+  clip-path: url(#myClip);
+}
+.resume .clipped-box:nth-of-type(1){
+  background-image: url('../../assets/project01.png');
+  background-size: auto 100%;
+  background-position: center;
+}
+.resume .clipped-box:nth-of-type(2){
+  background-image: url('../../assets/project03.png');
+  background-size: cover;
+  background-position: center;
+}
+.resume .clipped-box:nth-of-type(3){
+  background-image: url('../../assets/project03.png');
+  background-size: cover;
+  background-position: center;
+}
+.resume .clipped-box:nth-of-type(4){
+  background-image: url('../../assets/project04.png');
+  background-size: cover;
+  background-position: center;
+}
