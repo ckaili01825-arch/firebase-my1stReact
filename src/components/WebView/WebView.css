@@ -1,0 +1,175 @@
+.project-display-box{
+    width: 100%;
+    padding-bottom: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff54;
+    border-top: 1px solid #fff;
+}
+.project-container{
+    width: 80%;
+    aspect-ratio: 1332/881;
+    position: relative;
+
+}
+.project-container .project-bg1{
+    position: absolute;
+    background-color: rgba(255,255,255,0.76);
+    width: 92%;
+    aspect-ratio: 1.58;
+    bottom:0;
+    left: 0%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.project-bg2-shadow {
+  position: absolute;
+  width: 79%;
+  aspect-ratio: 1.58;
+  bottom: 7.5%;
+  left: 5%;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.project-bg2 {
+  width: 100%;
+  height: 100%;
+  background-color: #93A8B2;
+  mask-image: url('../../assets/Subtract.svg');
+  -webkit-mask-image: url('../../assets/Subtract.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+.project-container.project3 .project-bg2{
+    background-color: #F197C5;
+
+}
+
+.project-num{
+    position: absolute;
+    bottom: 68%;
+    left: 5%;
+    width: 25%;
+    aspect-ratio: 398/250;
+}
+.project-num img{
+    width: 100%;
+    object-fit: contain;
+}
+.project-screen{
+    position: absolute;
+    width: 63%;
+    aspect-ratio:883/621;
+    right:3.5%;
+    bottom: 10%;
+    border: 4px solid #fff;
+    background-color: #fff;
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Firefox 隱藏 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.project-screen::-webkit-scrollbar {
+  display: none; /* Chrome / Safari 隱藏 */
+}
+.project-screen-contents{
+    width: 100%;
+    height: 100%;
+}
+.project-screen-contents img{
+    width: 100%;
+    object-fit: contain;
+    display: block;/*削掉inline 元素會保留一條與文字基線 (baseline) 對齊的空白區域*/
+}
+
+.project-decoration-text{
+    position: absolute;
+    transform: rotate(270deg);
+    font-weight: 800;
+    letter-spacing: 10px;
+    bottom: 1.8%;
+    left: 0.6%;
+    transform-origin: top left;
+    font-size: 1vw;
+}
+.project-title{
+    position: absolute;
+    font-weight: 900;
+    bottom: 45%;
+    left: 12.7%;
+    font-size: 2.8vw;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.project-subtitle{
+    position: absolute;
+    font-weight: 600;
+    bottom: 45%;
+    left: 20%;
+    font-size: 2vw;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5vw;
+
+}
+.project-subtitle > p:nth-child(1){
+    font-size: 1.5vw;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1;
+}
+.project-subtitle > p:nth-child(2){
+    font-size: 2.3vw;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1;
+}
+.project-jobs-title{
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+    background-color: black;
+    padding: 10px 30px;
+}
+.project-jobs-title p{
+    font-size: 1vw;
+    color: #fff;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.project-jobs-list{
+    position: absolute;
+    bottom: 25%;
+    left: 20%;
+    background-color: black;
+    padding: 10px 30px;
+}
+.project-jobs-list > p{
+    font-size: 1vw;
+    color: #fff;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.project-visual-full{
+    position: absolute;
+    width: 8%;
+    border: 2px solid #fff;
+    background-color: #fff;
+    bottom:13%;
+    right:2%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.project-visual-full img{
+    display: block;/*削掉inline 元素會保留一條與文字基線 (baseline) 對齊的空白區域*/
+    width: 100%;
+    object-fit: contain;
+}

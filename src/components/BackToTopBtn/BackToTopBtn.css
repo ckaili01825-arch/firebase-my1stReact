@@ -9,8 +9,16 @@
     cursor: pointer;
     z-index: 99;
     display: none;
-}
+    border-radius: 50%;
 
+}
+.back-to-top-btn img{
+    width: 80%;
+}
 .back-to-top-btn.show{
-    display: flex;
+
+        display: flex;
+    align-items: center;
+    justify-content: center;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }

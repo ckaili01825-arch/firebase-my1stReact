@@ -25,15 +25,20 @@
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
+    pointer-events: none;
     align-items: center;
     justify-content: center;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
 }
 .overlay-container.show {
-  display: flex;
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
 }
+
 .menu-overlay{
     background-color: rgba(255, 255, 255, 0.925);
     height: 900px;
@@ -41,25 +46,50 @@
     top: 0;
     right:0;
     display: flex;
+    opacity: 0;
+    pointer-events: none;
     flex-direction: column;
     position: absolute;
     padding: 50px 0 0 0;
     backdrop-filter: blur(2px);
+    
+}
+.overlay-container.show .menu-overlay{
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    animation: slideIn 0.3s ease-in-out forwards;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);/*往右移動元素自身寬度的 100%。*/
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
-
-.menu-list a{
+.menu-list a.menu{
     font-size: 24px;
     color: black;
     text-decoration: none;
-    margin: 10px 0;
+    padding: 10px 0;
     text-align: center;
+
+    line-height: 1.5;
+    margin: 0;
+    letter-spacing: 0.8px;
 }
 
-.menu-list a:hover{
-background-color: rgba(206, 232, 255, 0.411);
-}
+
 .menu-list{
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
+}
+.menu-list  .menu.active{
+    background-color: #5ecaca33;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    
 }

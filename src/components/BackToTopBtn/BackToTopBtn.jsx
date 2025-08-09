@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import './BackToTopBtn.css';
+import triangleArrowUpIcon from '../../assets/icon_triangle-arrow-up.svg';
 
 function BackToTopBtn() {
     const [isBTTbtnVisible, setisBTTbtnVisible] = useState(false);
@@ -26,12 +27,15 @@ function BackToTopBtn() {
         });
     }
     return(
-        <div className = {`back-to-top-btn ${isBTTbtnVisible ? 'show' : ''}`} onClick={handleClickBackToTop} ></div>
-        /*React 使用了 虛擬 DOM + JSX 語法，
+        <div className = {`back-to-top-btn ${isBTTbtnVisible ? 'show' : ''}`} onClick={handleClickBackToTop} >
+            {/*React 使用了 虛擬 DOM + JSX 語法，
             所以你寫在 JSX 裡的 onClick={handleClick} 會：
             1.在背後幫你加上事件監聽器（addEventListener）；
             2.當組件卸載時，React 也會自動移除監聽器（避免記憶體洩漏）；
-            3.讓你的事件處理邏輯維持在元件邏輯內部，更容易維護。*/
+            3.讓你的事件處理邏輯維持在元件邏輯內部，更容易維護。*/}
+            <img src={triangleArrowUpIcon} alt="back to top button" />
+        </div>
+
         
     )
 }

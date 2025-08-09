@@ -1,8 +1,8 @@
 .navbar{
     display: flex;
     width: 100%;
-    gap: 20px;
-    justify-content: center;
+    gap: 2.5%;
+    justify-content: flex-end;
     height: 50px;
     align-items: center;
     position: fixed;
@@ -12,11 +12,30 @@
     z-index: 99;
     backdrop-filter: blur(2px);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+    line-height: 1.5;
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    padding: 0 4%;
+    box-sizing: border-box;
 }
 .navbar a{
     color: #000;
+    position: relative;
 }
 .navbar a:hover{
     color: #00000093;
 }
-
+.navbar a.active{
+    color:#00000093;
+}
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* 與文字的距離 */
+  width: 100%;
+  height: 2px;
+  background-color: #0000005b;
+}

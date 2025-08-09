@@ -1,5 +1,5 @@
 import './NavbarMobile.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
 
 function NavbarMobile(){
@@ -34,9 +34,10 @@ function NavbarMobile(){
         <div className={`overlay-container ${isMenuOpen ? 'show' : ''}`} >
         <div className='menu-overlay' >
             <div className='menu-list' ref={menuRef}>
-                <Link to="/" className='menu' onClick={()=>setIsMenuOpen(false)} >Home</Link>
-                <Link to="/about" className='menu' onClick={()=>setIsMenuOpen(false)}>About</Link>
-                <Link to="/webgl01" className='menu' onClick={()=>setIsMenuOpen(false)}>WebGL</Link>   
+                <NavLink to="/" className='menu' onClick={()=>setIsMenuOpen(false)} >Home</NavLink>
+                <NavLink to="/about" className='menu' onClick={()=>setIsMenuOpen(false)}>About</NavLink>
+                <NavLink to="/works" className='menu' onClick={()=>setIsMenuOpen(false)}>Works</NavLink>
+                <NavLink to="/webgl01" className='menu' onClick={()=>setIsMenuOpen(false)}>WebGL</NavLink>   
             </div>
         </div>
         </div>

@@ -1,11 +1,10 @@
 
 .about-container{
-    padding:50px 0 50px 0;
+    padding:50px 0 250px 0;
     width: 100%;
     justify-content: center;
     display: flex;
-    min-height: 100vh;
-    background: linear-gradient(90deg, rgb(179, 255, 253) 0px, rgb(227, 230, 255) 50%, rgb(253, 229, 245) 100%);
+ 
 }
 
 .resume{
@@ -68,7 +67,6 @@
     margin: 15px 0 10px 0;
     width: 100%;
     text-align: center;
-     font-family: 'Outfit', sans-serif;
      letter-spacing: 1.5px;
 }
 .resume-profile-container .profile-text-container p:nth-of-type(1){
@@ -141,12 +139,15 @@
     flex-direction: row;
     margin: 5px 0 15px 0;
 }
+.resume-languages-skill{
+        display: block;
+    padding: 0 0 0 10px;
 
+}
 
 .resume p, .resume li{
     line-height: 1.5;
     margin: 0;
-    font-family: 'Outfit', sans-serif;
     letter-spacing: 0.8px;
     font-size: 16px;
 }
@@ -167,7 +168,6 @@
 
 
 .resume .resume-title{
-    font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 1.5px;
@@ -175,7 +175,6 @@
 }
 
 .resume .resume-subtitle{
-    font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 0.5px;
@@ -192,29 +191,77 @@
     text-align: justify;
 }
 
-.resume .clipped-box{
-  width: 80%;
-  aspect-ratio:4/3;
-  background-color: rgb(192, 192, 192);
-  clip-path: url(#myClip);
+
+
+.resume-projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
 }
-.resume .clipped-box:nth-of-type(1){
-  background-image: url('../../assets/project01.png');
-  background-size: auto 100%;
-  background-position: center;
+.resume-project{
+    padding-bottom: 20px;
 }
-.resume .clipped-box:nth-of-type(2){
-  background-image: url('../../assets/project03.png');
-  background-size: cover;
-  background-position: center;
+
+
+.resume-project-cover{
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
 }
-.resume .clipped-box:nth-of-type(3){
-  background-image: url('../../assets/project03.png');
-  background-size: cover;
-  background-position: center;
+.resume-project-cover .more-info-icon{
+    position: absolute;
+    background-color: var(--transparent-color-3);
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    bottom: 20px;
+    right: 15px;
+    opacity: 0;
 }
-.resume .clipped-box:nth-of-type(4){
-  background-image: url('../../assets/project04.png');
-  background-size: cover;
-  background-position: center;
+.resume-project:hover .more-info-icon{
+    opacity: 1;
+}
+.resume-project-cover .more-info-icon .more-info-icon-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.resume-project-cover .more-info-icon .more-info-icon-container::after{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-image: url(../../assets/icon_arrow_forward.svg);
+    background-size: cover;
+    top:5%;
+    left: 5%;
+}
+.resume-project-cover img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.resume-project-tags{
+    display: flex;
+    flex-direction: row;
+    margin-left: -10px;
+    color: var(--primary-color);
+    flex-wrap: wrap;
+}
+.resume-project-tags p{
+    flex-shrink: 0;
+    padding-left: 10px;
+}
+
+.resume-info-container hr{
+     border: none;   
+  border-top: 1px solid #00000014;
+  margin: 0 0 20px 0;
+  width: 100%;
+
 }

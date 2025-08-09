@@ -31,4 +31,4 @@ function ParallaxBackground(){
         </>
     );
 }
-export default ParallaxBackground
+export default ParallaxBackground;
