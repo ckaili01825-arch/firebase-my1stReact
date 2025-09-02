@@ -8,6 +8,7 @@ import './Home.css';
 import ParallaxBackground from '../../components/ParallaxBackground';
 import { NavLink } from 'react-router-dom';
 
+
 /*
 import Navbar from '../../components/Navbar/Navbar';
 */

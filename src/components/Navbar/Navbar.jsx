@@ -7,8 +7,9 @@ function Navbar(){
       <nav className='navbar'>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
+        {/*
         <NavLink to="/works">Works</NavLink>
-        <NavLink to="/webgl01">WebGL</NavLink>
+        */}
       </nav>
 
       </>

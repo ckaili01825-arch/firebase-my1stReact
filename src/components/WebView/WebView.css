@@ -9,7 +9,7 @@
     border-top: 1px solid #fff;
 }
 .project-container{
-    width: 80%;
+    width: 75%;
     aspect-ratio: 1332/881;
     position: relative;
 
@@ -20,9 +20,12 @@
     width: 92%;
     aspect-ratio: 1.58;
     bottom:0;
-    left: 0%;
+    left: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
+}
+.project-container.reverse-direct .project-bg1{
+    left: 8%;
 }
 
 .project-bg2-shadow {
@@ -33,7 +36,9 @@
   left: 5%;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
 }
-
+.project-container.reverse-direct .project-bg2-shadow {
+    left:13%;
+}
 .project-bg2 {
   width: 100%;
   height: 100%;
@@ -44,12 +49,51 @@
   -webkit-mask-repeat: no-repeat;
   mask-size: contain;
   -webkit-mask-size: contain;
+  position: relative;
+}
+.project-container.reverse-direct .project-bg2 {
+    
+}
+.project-container.project1 .project-bg2{
+    background: -webkit-radial-gradient(
+        circle at 80% 20%,
+        #d3dfe1 10%,
+         #85B3B5 40%,
+          #D3DAE1 100%
+    );  
+    background: radial-gradient(
+        circle at 60% 20%,
+        #d3dfe1 10%,
+         #85B3B5 40%,
+          #d3dfe1 100%     
+    );
+
 }
 .project-container.project3 .project-bg2{
-    background-color: #F197C5;
+    background: -webkit-radial-gradient(
+        circle at 80% 20%,
+        #F197C5 10%,
+         #FFE4F2 40%,
+          #D3DAE1 100%
+    );  
+    background: radial-gradient(
+        circle at 60% 20%,
+        #F197C5 10%,
+         #FFE4F2 40%,
+          #d3dfe1 100%     
+    );
 
 }
+.project-container.project2 .project-bg2{
+    background-color: #FFE5E5;
+    transform: scaleX(-1);
 
+}
+.project-container.project4 .project-bg2{
+    background-color: #fdd5a1;
+    transform: scaleX(-1);
+
+}
 .project-num{
     position: absolute;
     bottom: 68%;
@@ -61,6 +105,9 @@
     width: 100%;
     object-fit: contain;
 }
+.project-container.reverse-direct .project-num{
+    left:65%;
+}
 .project-screen{
     position: absolute;
     width: 63%;
@@ -68,7 +115,19 @@
     right:3.5%;
     bottom: 10%;
     border: 4px solid #fff;
-    background-color: #fff;
+    background-color: #d7d7d7;
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Firefox 隱藏 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.project-container.reverse-direct .project-screen{
+    position: absolute;
+    width: 63%;
+    aspect-ratio:883/621;
+    right:35%;
+    bottom: 10%;
+    border: 4px solid #fff;
+    background-color: #d7d7d7;
     overflow-y: scroll;
     scrollbar-width: none;  /* Firefox 隱藏 */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -96,6 +155,11 @@
     transform-origin: top left;
     font-size: 1vw;
 }
+.project-container.reverse-direct .project-decoration-text{
+    left: 80%;
+    transform: rotate(90deg);
+    transform-origin: top right;
+}
 .project-title{
     position: absolute;
     font-weight: 900;
@@ -107,7 +171,16 @@
     flex-direction: column;
     
 }
-
+.project-container.reverse-direct .project-title{
+    position: absolute;
+    font-weight: 900;
+    bottom: 45%;
+    left: 67.7%;
+    font-size: 2.8vw;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
 .project-subtitle{
     position: absolute;
     font-weight: 600;
@@ -119,7 +192,18 @@
     flex-direction: row;
     align-items: baseline;
     gap: 0.5vw;
-
+}
+.project-container.reverse-direct .project-subtitle{
+    position: absolute;
+    font-weight: 600;
+    bottom: 40%;
+    left: 70%;
+    font-size: 2vw;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5vw;
 }
 .project-subtitle > p:nth-child(1){
     font-size: 1.5vw;
@@ -152,6 +236,7 @@
     left: 20%;
     background-color: black;
     padding: 10px 30px;
+    
 }
 .project-jobs-list > p{
     font-size: 1vw;
@@ -163,13 +248,16 @@
     position: absolute;
     width: 8%;
     border: 2px solid #fff;
-    background-color: #fff;
-    bottom:13%;
-    right:2%;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    background-color: #d7d7d7;
+    bottom:16%;
+    right:1%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .project-visual-full img{
     display: block;/*削掉inline 元素會保留一條與文字基線 (baseline) 對齊的空白區域*/
     width: 100%;
     object-fit: contain;
+    
 }

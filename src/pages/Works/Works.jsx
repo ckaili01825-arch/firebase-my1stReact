@@ -2,6 +2,10 @@ import './Works.css';
 import WebView from '../../components/WebView/WebView';''
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+
+
 function Works() {
   const location = useLocation();
 
@@ -24,15 +28,61 @@ return(
         <div className='works-container-wrap'>
             <div className="title">
                 <p>
-                    Select<br></br>A<br></br>Work<br></br>Project
+                    Select<br></br>a<br></br>Work<br></br>Project
                 </p>
             </div>
             
             <div className='works-folders'>
                 <div className='works-folder'>
                 <div className='works-folder-image'>
-                    <img src="/project03.png" alt="" />
+                    <img src="/cover-freya.png" alt="" />
                     <div className='filter'></div>
+                     <div className='filter-decor'></div>
+                </div>
+                <div className='works-folder-info'>
+                    <div className='works-folder-type'>
+                        <div className='works-folder-type-icon'></div>
+                    </div>
+                    <div className='works-folder-text'>
+                        <p>Freya Landing Page</p>
+                    </div>
+                </div>
+                </div>
+                <div className='works-folder'>
+                <div className='works-folder-image'>
+                    <img src="/cover-dragonGoddess.png" alt="Dragon Goddess Landing Page" />
+                    <div className='filter'></div>
+                    <div className='filter-decor'></div>
+                </div>
+                <div className='works-folder-info'>
+                    <div className='works-folder-type'>
+                        <div className='works-folder-type-icon'></div>
+                    </div>
+                    <div className='works-folder-text'>
+                        <p>Dragon Goddess Landing Page</p>
+                    </div>
+                </div>
+                </div>
+                <div className='works-folder'>
+                <div className='works-folder-image'>
+                    <img src="/cover-kira.png" alt="news platforms' folder's cover" />
+                    <div className='filter'></div>
+                     <div className='filter-decor'></div>
+                </div>
+                <div className='works-folder-info'>
+                    <div className='works-folder-type'>
+                        <div className='works-folder-type-icon'></div>
+                    </div>
+                    <div className='works-folder-text'>
+                        <p>Kirabase Theme Pages</p>
+                    </div>
+                </div>
+                </div>
+                <div className='works-folder'>
+                <div className='works-folder-image'>
+                    <img src="/cover-para.png" alt="landing pages for games' folder's cover" />
+                    <div className='filter'></div>
+                     <div className='filter-decor'></div>
                 </div>
                 <div className='works-folder-info'>
                     <div className='works-folder-type'>
@@ -43,56 +93,9 @@ return(
                     </div>
                 </div>
                 </div>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/project01.png" alt="news platforms' folder's cover" />
-                    <div className='filter'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>news platforms</p>
-                    </div>
-                </div>
-                </div>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/project01.png" alt="news platforms' folder's cover" />
-                    <div className='filter'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>news platforms</p>
-                    </div>
-                </div>
-                </div>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/project04.png" alt="landing pages for games' folder's cover" />
-                    <div className='filter'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>landing pages for games</p>
-                    </div>
-                </div>
-                </div>
             </div>
         </div>
     </div>
-
-    
-        <WebView />
-   
-
 
     </>
 )

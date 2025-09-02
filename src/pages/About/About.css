@@ -4,7 +4,17 @@
     width: 100%;
     justify-content: center;
     display: flex;
+    transition: opacity 0.3s ease-in-out;
  
+}
+.about-container.fade-out{
+    opacity: 0.3;
+}
+@media screen and (max-width:768px){
+    
+.about-container{
+    padding:50px 0 170px 0;
+}
 }
 
 .resume{
@@ -21,6 +31,7 @@
         display: flex;
         flex-direction: column;
         padding:0px 10px;
+        align-items: center;
     }
 }
 
@@ -41,13 +52,14 @@
 }
 @media screen and (max-width: 768px) {
     .resume-row1{
-        width: 100%;
+        width: 90%;
+        margin-top: 30px;
     }
     .resume-row2{
-        width: 100%;
+        width: 90%;
     }
     .resume-row3{
-        width: 100%;
+        width: 90%;
     }
 }
 .resume-row1 > .sticky-wrapper {
@@ -122,7 +134,7 @@
 }
 
 .resume-info-container{
-    background-color: rgba(255, 255, 255, 0.596);
+    background-color: rgba(255, 255, 255, 0.76);
     width: 100%;
     padding: 20px 20px;
     margin: 15px 0;
@@ -132,7 +144,7 @@
 
 .resume-skill-box{
     display: block;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 30px;
 }
 .resume-skill-list{
     display: flex;
@@ -141,7 +153,7 @@
 }
 .resume-languages-skill{
         display: block;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 30px;
 
 }
 
@@ -188,7 +200,8 @@
      font-size: 14px;
 }
 .resume .resume-paragraph{
-    text-align: justify;
+    text-align: left;
+
 }
 
 
@@ -203,14 +216,32 @@
 }
 .resume-project{
     padding-bottom: 20px;
+    cursor: pointer;
 }
 
 
 .resume-project-cover{
     width: 100%;
     aspect-ratio: 16/9;
-    overflow: hidden;
     position: relative;
+    border-radius: 10px;
+        border: 2px solid rgba(14, 69, 74, 0.1);;
+   
+}
+.resume-project-cover .lazy-load-image-background {
+   display: block !important;   
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;  
+  overflow: hidden;
+}
+.resume-project-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.3);
+    display: block;
+    
 }
 .resume-project-cover .more-info-icon{
     position: absolute;
@@ -220,11 +251,11 @@
     border-radius: 50px;
     bottom: 20px;
     right: 15px;
-    opacity: 0;
 }
 .resume-project:hover .more-info-icon{
-    opacity: 1;
+    background-color: var(--primary-color);
 }
+
 .resume-project-cover .more-info-icon .more-info-icon-container{
     position: relative;
     width: 100%;
@@ -235,16 +266,12 @@
     position: absolute;
     width: 90%;
     height: 90%;
-    background-image: url(../../assets/icon_arrow_forward.svg);
+    background-image: url(../../assets/icon_arrow_outward.svg);
     background-size: cover;
     top:5%;
     left: 5%;
 }
-.resume-project-cover img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
+
 
 .resume-project-tags{
     display: flex;
@@ -264,4 +291,9 @@
   margin: 0 0 20px 0;
   width: 100%;
 
+}
+@media screen and (max-width:768px){
+    .resume-info-container{
+        margin: 15px 0 0 0;
+    }
 }

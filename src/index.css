@@ -20,6 +20,9 @@
   --transparent-color-3: #2e656576;
   --transparent-color-4: #2b3a3ae4;
 
+  --sectorBtn-color-inside: rgba(31, 71, 71, 0.667);
+  --sectorBtn-color-outside: #2e656576;
+
   --gradient-color-1:rgb(179, 255, 253);
   --gradient-color-2: rgb(227, 230, 255);
   --gradient-color-3:rgb(253, 229, 245);
@@ -30,10 +33,11 @@
     var(--gradient-color-2) 50%, 
     var(--gradient-color-3) 100%);
     */
-    background-size: 100% 100%;
+    background-size: cover;
 background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
-background-image: radial-gradient(200% 200% at 30% 60%, #FF9EEA00 1%, #FFD7F4FF 76%),radial-gradient(113% 91% at 17% -2%, #B3FFFDFF 19%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #E2E7FFFF 16%, #FF000000 99%),radial-gradient(55% 109% at 45% 41%, #FFD7F4FF 14%, #073AFF00 100%),radial-gradient(142% 91% at -6% 74%, #B3FFF8FF 30%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FCE4F4FF 0%, #E2E7FFFF 99%);
-}
+   background-image: radial-gradient(200% 200% at 30% 60%, #FF9EEA00 1%, #FFD7F4FF 76%),radial-gradient(113% 91% at 17% -2%, #B3FFFDFF 19%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #E2E7FFFF 16%, #FF000000 99%),radial-gradient(55% 109% at 45% 41%, #FFD7F4FF 14%, #073AFF00 100%),radial-gradient(142% 91% at -6% 74%, #B3FFF8FF 30%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #FCE4F4FF 0%, #E2E7FFFF 99%);
+
+  }
 
 a {
   font-weight: 500;

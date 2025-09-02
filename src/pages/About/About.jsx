@@ -1,15 +1,61 @@
 import './About.css';
 import { NavLink } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+
+import ProjectViewPC from '../../components/ProjectView/ProjectViewPC';
+import ProjectViewPCPara from '../../components/ProjectView/ProjectViewPCPara';
+import ProjectViewPCKira from '../../components/ProjectView/ProjectViewPCKira';
+import ProjectViewPCDraGod from '../../components/ProjectView/ProjectViewPCDraGod';
+import ProjectView from '../../components/ProjectView/ProjectView';
+import ProjectViewMBKira from '../../components/ProjectView/ProjectViewMBKira';
+import ProjectViewMBPara from '../../components/ProjectView/ProjectViewMBPara';
+import ProjectViewMBDraGod from '../../components/ProjectView/ProjectViewMBDraGod';
+import { useState, useEffect } from "react";
+
+
 function About(){
+  const [showProjectView, setShowProjectView] = useState(false);
+  const [isMB, setIsMB] = useState(window.innerWidth <= 767);
+ const [selectedProjectKey, setSelectedProjectKey] = useState(null);
+  const [fadeOut, setFadeOut] = useState(false);
+  const projectComponents = {
+    freya: { mobile: ProjectView, pc: ProjectViewPC },
+    kira: { mobile: ProjectViewMBKira, pc: ProjectViewPCKira },
+    para: { mobile: ProjectViewMBPara, pc: ProjectViewPCPara },
+    dragonGoddess: { mobile: ProjectViewMBDraGod, pc: ProjectViewPCDraGod }
+  };
+
+  const handleProjectClick = (key) => {
+    setSelectedProjectKey(key);
+    setShowProjectView(true);
+    setFadeOut(true);
+    document.body.style.overflow = 'hidden';
     
+  };
+   const handleClose = () => {
+    setShowProjectView(false);
+    setFadeOut(false);
+    document.body.style.overflow = '';
+    setSelectedProjectKey(null);
+  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMB(window.innerWidth <= 767);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const ProjectComponent = selectedProjectKey ? (isMB ? projectComponents[selectedProjectKey].mobile : projectComponents[selectedProjectKey].pc) : null;
+
     return(
 <>
-<div className="about-container">
+<div className={`about-container ${fadeOut ? "fade-out" : ""}`}>
       <div className="resume">
         <div className="resume-row resume-row1">
           <div className="sticky-wrapper">
             <div className="resume-info-container">
-              {/* 個人資料 */}
               <div className="resume-profile-container">
                 <div className="resume-profile-photo--frame">
                   <div className="resume-profile-photo" />
@@ -40,18 +86,68 @@ function About(){
             <p className="resume-title">About me</p>
             
                 <p  className='resume-paragraph'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p  className='resume-paragraph'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Hi! I'm Kaili Chang. 
+                  I am a web designer and I have related working experiences in this field for over two years.
+                  I used to work as a web visual designer for a gaming news website company, and is familiar with figma prototyping, RWD responsive feature design and front-end coding.
+                  I have experience in increasing users website reading usabiliy and linger them in website for longer time. 
+                  I also have had the experience in effectively improving the news website optimization score in google pagespeed.
+                  I am capable of completing a website from design to coding by myself alone, and am also capable of the cross fields communication between project managers and programmers.
                 </p>
           </div>
             <div className="resume-info-container">
                 <p className='resume-title'>Projects</p>
                 <div className='resume-projects-container'>
+
                   <div className='resume-project'>
+                    <div className='resume-project-cover' onClick={() => handleProjectClick('freya')}>
+                      <LazyLoadImage src="/cover-freya.png" alt="Gaming landing page-Freya" effect='opacity'/>
+                      <div className='more-info-icon'>
+                        <div className='more-info-icon-container'></div>
+                      </div>
+                    </div>
+                    <div className='resume-project-tags'>
+                      <p>#Web Visual Design</p>
+                      <p>#Frontend Programming</p>
+                    </div>
+                    <p>Gaming Landing Page - Freya</p>
+                  </div>
+                  <hr />
+                  <div className='resume-project'  onClick={() => handleProjectClick('dragonGoddess')}>
                     <div className='resume-project-cover'>
-                      <img src="/project01.png" alt="" />
+                      <LazyLoadImage src="/cover-dragonGoddess.png" alt="Dragon Goddess Gaming Site" effect='opacity'/>
+                     {/* <NavLink to="/works#section1">*/}
+                      <div className='more-info-icon' id="project-dragonGoddess">
+                        <div className='more-info-icon-container'></div>
+                      </div>
+                      {/*
+                      </NavLink>
+                      */}
+                    </div>
+                    <div className='resume-project-tags'>
+                      <p>#Web Visual Design</p>
+                      <p>#Frontend Programming</p>
+                    </div>
+                    <p>Gaming Landing Page - Dragon Goddess</p>
+                    
+                  </div>
+                  <hr />
+                  <div className='resume-project' onClick={() => handleProjectClick('kira')}>
+                    <div className='resume-project-cover'>
+                      <LazyLoadImage src="/cover-kira.png" alt="kirabase x paradaily theme pages" effect='opacity' />
+                      <div className='more-info-icon' >
+                        <div className='more-info-icon-container'></div>
+                      </div>
+                    </div>
+                    <div className='resume-project-tags'>
+                      <p>#RWD Design</p>
+                      <p>#UI Engineering</p>
+                    </div>
+                    <p>Kirabase x Paradaily Theme Pages</p>
+                  </div>
+                  <hr/>
+                  <div className='resume-project'  onClick={() => handleProjectClick('para')}>
+                    <div className='resume-project-cover'>
+                      <LazyLoadImage src="/cover-para.png" alt="Paradaily News Platform" effect="opacity"/>
                       <div className='more-info-icon'>
                         <div className='more-info-icon-container'></div>
                       </div>
@@ -63,51 +159,7 @@ function About(){
                     </div>
                      <p>Paradaily's News Platform</p>
                   </div>
-                  <hr />
-                  <div className='resume-project'>
-                    <div className='resume-project-cover'>
-                      <img src="/project04.png" alt="" />
-                      <NavLink to="/works#section1">
-                      <div className='more-info-icon'>
-                        <div className='more-info-icon-container'></div>
-                      </div>
-                      </NavLink>
-                    </div>
-                    <div className='resume-project-tags'>
-                      <p>#Web Visual Design</p>
-                      <p>#Frontend Programming</p>
-                    </div>
-                    <p>Gaming Landing Page - Freya</p>
-                  </div>
-                  <hr />
-                  <div className='resume-project'>
-                    <div className='resume-project-cover'>
-                      <img src="/project04.png" alt="" />
-                      <div className='more-info-icon'>
-                        <div className='more-info-icon-container'></div>
-                      </div>
-                    </div>
-                    <div className='resume-project-tags'>
-                      <p>#Web Visual Design</p>
-                      <p>#Frontend Programming</p>
-                    </div>
-                    <p>Gaming Landing Page - Dragon Goddess</p>
-                    
-                  </div>
-                  <hr />
-                  <div className='resume-project'>
-                    <div className='resume-project-cover'>
-                      <img src="/project04.png" alt="" />
-                      <div className='more-info-icon'>
-                        <div className='more-info-icon-container'></div>
-                      </div>
-                    </div>
-                    <div className='resume-project-tags'>
-                      <p>#RWD Design</p>
-                      <p>#UI Engineering</p>
-                    </div>
-                    <p>#Kirabase x Paradaily Theme Pages</p>
-                  </div>
+
 
                 </div>
                 
@@ -172,6 +224,9 @@ function About(){
         </div>
       </div>
     </div>
+{showProjectView && ProjectComponent && (
+        <ProjectComponent onClose={handleClose} />
+      )}
 </>
 
     )
