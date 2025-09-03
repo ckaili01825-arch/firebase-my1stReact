@@ -1,9 +1,10 @@
 {
     "freya": [
-        { "id": 1, "title": "gaming landing page 1", "description": "內容 A","imgsrc":"/fullpic-freya-pc.png" }
+        { "id": 1, "title": "gaming landing page 1", "description": "內容 A","imgsrc":"/fullpic-freya-pc.png" },
+        { "id": 2, "title": "gaming landing page 2", "description": "內容 A","imgsrc":"/fullpic-freya-mb.png" }
     ],
     "dragonGoddess": [
-        { "id": 1, "title": "gaming landing page 2", "description": "內容 X","imgsrc":"/fullpic-dragonGoddess-pc.png"  }
+        { "id": 1, "title": "gaming landing page 1", "description": "內容 X","imgsrc":"/fullpic-dragonGoddess-pc.png"}
     ],
     "kirabase": [
         { "id": 1, "title": "kirabase page 1", "description": "內容 X","imgsrc":"/fullpic-kiraCat-pc.png"  },

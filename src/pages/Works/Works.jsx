@@ -20,11 +20,13 @@ return(
 <>
 
     <div className='works-page'>
+        {/*
         <section className='side-project'>
             <div className='title-wrap'>
                 <div className='section-title'>
                     <div className='title-moving-space'>
                         <h1>Side Project</h1>
+                        
                     </div> 
                 </div>
                 <div className='side-project-title'>
@@ -46,7 +48,36 @@ return(
                 </div>
             </div>
         </section>
+        */}
         <section className='side-project'>
+            <div className='title-wrap'>
+                <div className='section-title'>
+                    <div className='title-moving-space'>
+                        <h1>Side Project</h1>
+                    </div>
+                </div>
+
+                <div className='side-project-title'>
+                    <div className='title-moving-space'>
+                        <h2>Page Design</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div className='side-project-gallery'>
+                
+                <div className='cover-photo' onClick={()=>handleProjectClick("pandancake")}>
+                    <LazyLoadImage src="PANDAN CAKE.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("ebook")}>
+                    <LazyLoadImage src="fullpic-ebook02.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("gameapp")}>
+                    <LazyLoadImage src="fullpic-gameapp-tb.png" alt="" effect='opacity'/>
+                </div>
+            </div>
+        </section>
+        <section className='work-project'>
             <div className='side-project-title'>
                 <div className='title-moving-space'>
                     <h2>Work Project</h2>
@@ -66,36 +97,35 @@ return(
                 <div className='cover-photo' onClick={()=>handleProjectClick("kirabase")}>
                     <LazyLoadImage src="fullpic-kiraIdol-pc.png" alt="" effect='opacity'/>
                 </div>
-                <div className='cover-photo' >
-                </div>
-                <div className='cover-photo' >
-                </div>
             </div>
         </section>
-        <section className='side-project'>
+
+        <section className='side-project video-section'>
             <div className='title-wrap'>
                 <div className='section-title'>
                     <div className='title-moving-space'>
-                        <h1>Side Project</h1>
-                    </div>
-                </div>
-
-                <div className='side-project-title'>
-                    <div className='title-moving-space'>
-                        <h2>Landing Page Design</h2>
+                        <h1>Demo Video</h1>
                     </div>
                 </div>
             </div>
 
-            <div className='side-project-gallery'>
-                <div className='cover-photo' onClick={()=>handleProjectClick("gameapp")}>
-                    <LazyLoadImage src="fullpic-gameapp-tb.png" alt="" effect='opacity'/>
+            <div className='gallery-contents'>
+                <div className='side-project-gallery'>
+                    <a className='cover-photo' target='_blank' href="https://www.youtube.com/watch?v=eueIY_kEy4s">
+                        <LazyLoadImage src="video-cover-freya.png" alt="" effect='opacity'/>
+                        <div className='video-interface'>
+                            <div className='play-btn'></div>
+                        </div>
+                    </a>
                 </div>
-                <div className='cover-photo' onClick={()=>handleProjectClick("ebook")}>
-                    <LazyLoadImage src="fullpic-ebook01.png" alt="" effect='opacity'/>
-                </div>
-                <div className='cover-photo' >
-                    
+                <div className='side-project-gallery'>
+                    <a className='cover-photo' target='_blank' href="https://youtu.be/cf9f_VBZXGo?si=RDkOocHwh89FfXAk">
+                        <LazyLoadImage src="video-cover-dragonGoddess.png" alt="" effect='opacity'/>
+                        <div className='video-interface'>
+                            <div className='play-btn'></div>
+                        </div>
+                        
+                    </a>
                 </div>
             </div>
         </section>
