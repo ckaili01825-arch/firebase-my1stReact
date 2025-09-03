@@ -10,7 +10,7 @@ function ProjectView({ onClose }){
     const [isScrolling, setIsScrolling] = useState(false);
     const [showSlider, setShowSlider] = useState(false);
     const handleClick = () => {
-        setShowSlider(true); // 按下去顯示 PicSlider
+        setShowSlider(true);
     };
     function smoothScrollTo(element, target, duration = 500) {
         if (animationIdRef.current) {
@@ -121,26 +121,26 @@ function ProjectView({ onClose }){
                             <LazyLoadImage src='/profile-pic.png' alt='profile photo' effect='opacity'/>
                         </div>
                         <div className='profileView-description-text'>
-                            <p>美少女養成冒險遊戲的活動下載頁，封面視覺採動態設計。</p>
+                            <p>The event download page for the bishoujo adventure game.</p>
                         </div>
                     </div>
                     <div className='projectView-description-box'>
                         <div className='projectView-yt'>
-<iframe
-    src="https://www.youtube.com/embed/cf9f_VBZXGo?autoplay=1&loop=1&playlist=cf9f_VBZXGo&controls=0&modestbranding=1&rel=0"
-    title="YouTube video player"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-    style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%'
-    }}
-></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/cf9f_VBZXGo?autoplay=1&loop=1&playlist=cf9f_VBZXGo&controls=0&modestbranding=1&rel=0"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                                style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%'
+                                }}
+                            ></iframe>
 
                         </div>
                     </div>

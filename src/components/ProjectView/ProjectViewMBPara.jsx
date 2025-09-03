@@ -58,7 +58,8 @@ function ProjectView({ onClose }){
                     </div>
                     <div className='profileView-description-text'>
                         <p>
-                            Kirabase is a Japanese-style themed restaurant famous for its idol waitress performances, with many popular IP collaborations like Sanrio.
+                             A media platform covering news about games, anime, and tech products.
+                
                         </p>
                     </div>
                     

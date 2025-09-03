@@ -61,3 +61,16 @@
     height: 100vh;
     object-fit: contain;
 }
+
+.fulpic-overlay .swiper-button-prev,
+.fulpic-overlay .swiper-button-next {
+  color: #000000;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+.swiper-pagination-fraction{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+    box-sizing: border-box;
+}

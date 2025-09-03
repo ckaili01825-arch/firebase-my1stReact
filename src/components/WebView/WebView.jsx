@@ -3,8 +3,10 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 function WebView(){
+
     return(
         <>
+        
         <div className='project-display-box'>
             <div className='project-container project1' id='section1'>
                 <div className='project-bg1'></div>
@@ -15,7 +17,7 @@ function WebView(){
                     <LazyLoadImage
                         src="/01.svg"
                         alt="project01"
-                        effect="opacity"  // 透明淡入
+                        effect="opacity"
                     />
                 </div>
                 <div className='project-decoration-text'>

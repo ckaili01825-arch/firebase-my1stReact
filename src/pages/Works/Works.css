@@ -1,204 +1,139 @@
-.works-container {
-    width: 100%;
-    padding: 150px 10% 250px 10%;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-@media screen and (max-width:768px){
-     .works-container{
-        padding: 100px 10% 200px 10%;
-     }
-    
-}
-.works-container-wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    gap: 40px; 
-    
-}
-
-.works-container .title {
-    font-size: 50px;
-    color: #000000c8;
-    font-weight: 600;
-    width: 200px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 100px;
-    height: fit-content;
-    opacity: 0;
-    transform: translateY(20px);
-     animation: home-word-slide-in 0.5s ease-in-out 0.3s forwards;
-}
-@media screen and (max-width:480px){
-     .works-container .title{
-        font-size: 24px;
-     }
-}
-@media screen and (min-width:480px) and (max-width:768px){
-     .works-container .title{
-        font-size: 36px;
-     }
-}
-   
-
-@keyframes works-title-slide-in {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.works-folders {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-   
-}
-
-.works-folder {
-    flex: 1 1 300px; /* 最小 300px，剩餘空間平均分 */
-    max-width: 300px; /* 限制最大寬度 */
-    min-width: 130px;
-    aspect-ratio: 4/3;
-    background-color: rgba(37, 68, 72, 0.532);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
+.works-page{
+    padding-top: 100px;
+    padding-bottom: 300px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.works-folder-image {
-    width: 100%;
-    height: 100%;
+.works-page h1{
+    font-size: 30px
+}
+.title-wrap{
+    display: flex;
+    gap: 15px;
+}
+
+@media screen and (min-width:480px) and (max-width:768px){
+    .title-wrap{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+@media screen and (max-width:479px){
+    .title-wrap{
+       flex-direction: column;
+    }
+}
+.section-title{
+    min-height: 150px;
+    background-color: rgba(255, 255, 255, 0.76);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+@media screen and (max-width:479px){
+    .section-title{
+        min-height: 0px;
+        display: inline-block;
+    }
+}
+.section-title h1{
+    margin: 20px 10px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 50px;
+}
+@media screen and (max-width:479px){
+    .section-title h1{
+        min-height: 0px;
+        margin: 0px 10px;
+        font-size: 6vw;
+        font-weight: 800;
+        line-height: 1.5;
+    }
+}
+.side-project{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+@media screen and (max-width:479px){
+    .side-project{
+        width: 95%;
+        flex-direction: column;
+        gap:15px
+    }
+}
+.side-project-title{
+    background-color: rgba(255, 255, 255, 0.76);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+
+    
+}
+.side-project-title h2{
+    position: sticky;
+    top: 50px;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 30px;
+}
+@media screen and (max-width:479px){
+    .side-project-title h2{
+        font-weight: 800;
+        font-size: 6vw;
+    }
+}
+.cover-photo{
+    width: 33%;
+    aspect-ratio: 3/5;
+    display: flex;
+    border-radius: 10px;
     overflow: hidden;
-    position: relative;
-}
-.works-folder .filter{
-    background-color: rgba(255, 255, 255, 0.422);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(0.5px);
-    opacity: 0;
-}
-.works-folder:hover .filter{
-    opacity: 1;
-}
+    background-color: rgb(243, 243, 243);
+    box-sizing: border-box;
+    border: 1px solid #0e454a1a;
+    cursor: pointer;
 
-.works-folder .filter-decor{
+}
+.cover-photo span{
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-image: url('../../assets/icon_plus.svg');
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: center center;
-    opacity: 0;
 }
-.works-folder:hover .filter-decor{
-    opacity: 1;
-}
-.works-folder-image img {
+.cover-photo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-
+    object-position: top;
+    transition: transform 0.5s ease;
 }
-
-.works-folder:hover .works-folder-image img {
+.cover-photo:hover img{
     transform: scale(1.05);
 }
-
-.works-folder-info {
+.side-project-gallery{
     width: 100%;
-    height: 30px;
-    position: absolute;
-    padding: 25px 15px;
     box-sizing: border-box;
-    bottom: 0;
-    left: 0;
     display: flex;
     flex-direction: row;
+    gap: calc(1%/3);
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.76);
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
-
-.works-folder-type-icon {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    background-color: var(--transparent-color-2);
-    bottom: -5px;
-    left: -10px;
-}
-
-.works-folder-type-icon::before {
-    content: '';
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-image: url('../../assets/icon_game.svg');
-}
-
-.works-folder-text {
-    position: absolute;
-    left: 30px;
-    bottom: -5px;
-    height: 30px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    width: 80%;
-}
-
-.works-folder-text p {
-    color: #ffffff;
-    margin: 0;
-}
-
-
-@media screen and (max-width: 768px) {
-    .works-container-wrap {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .works-container .title {
-        position: static;
-        width: auto;
-        text-align: center;
-    }
-
-    .works-folder {
-        max-width: 80%;
-        flex: none;
+@media screen and (max-width:768px){
+    .side-project-gallery{
+         gap: 3px;
+         
+       
     }
 }
-.works-folders {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap; /* 自動換行 */
-    gap: 20px;
-    min-width: 0;
+
+
+@media screen and (max-width:768px){
+    .cover-photo{
+        width: 49%;
+       
+    }
 }
 
-.works-folder {
-    flex: 0 0 calc((100% - 40px) / 3); 
-    /* 100% - 兩個 gap(20px) 再除 3 */
-    aspect-ratio: 4/3;
-    background-color: rgba(37, 68, 72, 0.532);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}

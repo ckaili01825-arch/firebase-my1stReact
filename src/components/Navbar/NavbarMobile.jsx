@@ -49,9 +49,9 @@ function NavbarMobile(){
 
                 <NavLink to="/" className='menu' onClick={()=>setIsMenuOpen(false)} >Home</NavLink>
                 <NavLink to="/about" className='menu' onClick={()=>setIsMenuOpen(false)}>About</NavLink>
-                {/*
+                
                  <NavLink to="/works" className='menu' onClick={()=>setIsMenuOpen(false)}>Works</NavLink>
-                */}
+                
                
             </div>
         </div>

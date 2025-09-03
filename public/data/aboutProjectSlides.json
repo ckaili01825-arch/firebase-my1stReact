@@ -12,9 +12,30 @@
         { "id": 4, "title": "kirabase page 4", "description": "內容 X","imgsrc":"/fullpic-kiraPost-pc.png"  }
     ],
     "paradaily": [
-        { "id": 1, "title": "kirabase page 1", "description": "內容 X","imgsrc":"/fullpic-para-pc.png"  },
-        { "id": 2, "title": "kirabase page 2", "description": "內容 X","imgsrc":"/fullpic-paraCat-pc.png"  },
-        { "id": 3, "title": "kirabase page 3", "description": "內容 X","imgsrc":"/fullpic-paraPost-pc.png"  }
+        { "id": 1, "title": "paradaily page 1", "description": "內容 X","imgsrc":"/fullpic-para-pc.png"  },
+        { "id": 2, "title": "paradaily page 2", "description": "內容 X","imgsrc":"/fullpic-paraCat-pc.png"  },
+        { "id": 3, "title": "paradaily page 3", "description": "內容 X","imgsrc":"/fullpic-paraPost-pc.png"  }
+    ],
+    "gameapp": [
+        {"id": 1, "title": "gameapp page 1", "description": "內容 X","imgsrc":"/fullpic-gameapp-pc.jpg" },
+        {"id": 2, "title": "gameapp page 1", "description": "內容 X","imgsrc":"/fullpic-gameapp-tb.png" },
+        {"id": 3, "title": "gameapp page 1", "description": "內容 X","imgsrc":"/fullpic-gameapp-mb.png" }
+    ],
+    "ebook": [
+        {"id": 1, "title": "ebook page 1", "description": "內容 X","imgsrc":"/fullpic-ebook01.png" },
+        {"id": 2, "title": "ebook page 1", "description": "內容 X","imgsrc":"/fullpic-ebook02.png" },
+        {"id": 3, "title": "ebook page 1", "description": "內容 X","imgsrc":"/fullpic-ebook03.png" },
+        {"id": 4, "title": "ebook page 1", "description": "內容 X","imgsrc":"/fullpic-ebook04.png" },
+        {"id": 5, "title": "ebook page 1", "description": "內容 X","imgsrc":"/fullpic-ebook05.png" }
+    ],
+    "mellon": [
+        {"id": 1, "title": "mellon smoothie page", "description": "內容 X","imgsrc":"/mellon smoothie.png" }
+    ] ,    
+    "donuts": [
+        {"id": 1, "title": "donuts page", "description": "內容 X","imgsrc":"/donuts.png" }
+    ],
+    "pandancake":[
+        {"id": 1, "title": "pandan cake page", "description": "內容 X","imgsrc":"/PANDAN CAKE.png" }
+    ]
 
-    ]      
 }

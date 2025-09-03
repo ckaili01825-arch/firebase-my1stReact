@@ -57,7 +57,7 @@ function ProjectView({ onClose }){
                         <LazyLoadImage src='/profile-pic.png' alt='profile photo' effect='opacity'/>
                     </div>
                     <div className='profileView-description-text'>
-                        <p>description</p>
+                        <p>A one-page website for a sci-fi bishoujo card game, presenting the game’s background and world-building.</p>
                     </div>
                     
                 </div>

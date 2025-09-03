@@ -125,7 +125,7 @@ function ProjectView({ onClose }){
                             <LazyLoadImage src='/profile-pic.png' alt='profile photo' effect='opacity'/>
                         </div>
                         <div className='profileView-description-text'>
-                            <p>SF風美少女卡牌遊戲的一頁式網站，介紹遊戲背景世界觀。</p>
+                            <p>A one-page website for a sci-fi bishoujo card game, presenting the game’s background and world-building.</p>
                         </div>
                     </div>
                     <div className='projectView-description-box'>

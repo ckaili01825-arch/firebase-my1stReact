@@ -58,7 +58,7 @@ function ProjectView({ onClose }){
                     </div>
                     <div className='profileView-description-text'>
                         <p>
-                            Dragon Goddess is a male-oriented game with fantasy background.
+                           The event download page for the bishoujo adventure game.
                         </p>
                     </div>
                     

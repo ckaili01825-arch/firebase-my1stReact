@@ -1,104 +1,116 @@
 import './Works.css';
 import WebView from '../../components/WebView/WebView';''
-import { useEffect } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
+import PicSlider from '../../components/PicSlider/PicSlider';   
 
 
 function Works() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.slice(1);
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-        }, 500);
-      }
-    }
-  }, [location]);
+    const [showSlider, setShowSlider] = useState(false);
+    const [selectedProjectKey,setSelectedProjectKey] = useState(null);
+    const handleProjectClick = (slideKey) => {
+        console.log("slideKey:", slideKey); 
+        setSelectedProjectKey(slideKey);
+        setShowSlider(true);
+    };
 
 return(
-    <>
-    
-    <div className='works-container'>
-        <div className='works-container-wrap'>
-            <div className="title">
-                <p>
-                    Select<br></br>a<br></br>Work<br></br>Project
-                </p>
-            </div>
-            
-            <div className='works-folders'>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/cover-freya.png" alt="" />
-                    <div className='filter'></div>
-                     <div className='filter-decor'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>Freya Landing Page</p>
-                    </div>
-                </div>
-                </div>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/cover-dragonGoddess.png" alt="Dragon Goddess Landing Page" />
-                    <div className='filter'></div>
-                    <div className='filter-decor'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>Dragon Goddess Landing Page</p>
-                    </div>
-                </div>
-                </div>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/cover-kira.png" alt="news platforms' folder's cover" />
-                    <div className='filter'></div>
-                     <div className='filter-decor'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>Kirabase Theme Pages</p>
-                    </div>
-                </div>
-                </div>
-                <div className='works-folder'>
-                <div className='works-folder-image'>
-                    <img src="/cover-para.png" alt="landing pages for games' folder's cover" />
-                    <div className='filter'></div>
-                     <div className='filter-decor'></div>
-                </div>
-                <div className='works-folder-info'>
-                    <div className='works-folder-type'>
-                        <div className='works-folder-type-icon'></div>
-                    </div>
-                    <div className='works-folder-text'>
-                        <p>Paradaily News</p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<>
 
-    </>
+    <div className='works-page'>
+        <section className='side-project'>
+            <div className='title-wrap'>
+                <div className='section-title'>
+                    <div className='title-moving-space'>
+                        <h1>Side Project</h1>
+                    </div> 
+                </div>
+                <div className='side-project-title'>
+                    <div className='title-moving-space'>
+                        <h2>Landing Page Design</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div className='side-project-gallery'>
+                <div className='cover-photo' onClick={()=>handleProjectClick("mellon")}>
+                    <LazyLoadImage src="mellon smoothie.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("pandancake")}>
+                    <LazyLoadImage src="PANDAN CAKE.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("donuts")}>
+                    <LazyLoadImage src="donuts.png" alt="" effect='opacity'/>
+                </div>
+            </div>
+        </section>
+        <section className='side-project'>
+            <div className='side-project-title'>
+                <div className='title-moving-space'>
+                    <h2>Work Project</h2>
+                </div>
+
+            </div>
+            <div className='side-project-gallery'>
+                <div className='cover-photo' onClick={()=>handleProjectClick("freya")}>
+                    <LazyLoadImage src="fullpic-freya-pc.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("dragonGoddess")}>
+                    <LazyLoadImage src="fullpic-dragonGoddess-pc.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("paradaily")}>
+                    <LazyLoadImage src="fullpic-para-pc.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("kirabase")}>
+                    <LazyLoadImage src="fullpic-kiraIdol-pc.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' >
+                </div>
+                <div className='cover-photo' >
+                </div>
+            </div>
+        </section>
+        <section className='side-project'>
+            <div className='title-wrap'>
+                <div className='section-title'>
+                    <div className='title-moving-space'>
+                        <h1>Side Project</h1>
+                    </div>
+                </div>
+
+                <div className='side-project-title'>
+                    <div className='title-moving-space'>
+                        <h2>Landing Page Design</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div className='side-project-gallery'>
+                <div className='cover-photo' onClick={()=>handleProjectClick("gameapp")}>
+                    <LazyLoadImage src="fullpic-gameapp-tb.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' onClick={()=>handleProjectClick("ebook")}>
+                    <LazyLoadImage src="fullpic-ebook01.png" alt="" effect='opacity'/>
+                </div>
+                <div className='cover-photo' >
+                    
+                </div>
+            </div>
+        </section>
+     </div>   
+    {
+        showSlider && 
+        <PicSlider 
+        onClose={() => setShowSlider(false)} 
+        slideKey={selectedProjectKey}
+        />
+    }
+</>
 )
 
 }
+
+
 export default Works;

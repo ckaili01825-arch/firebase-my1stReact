@@ -148,21 +148,18 @@ function ProjectView({ onClose }) {
               </div>
               <div className='profileView-description-text'>
                 <p>
-                  Paradaily新聞
-                  <br />
-                  介紹遊戲/動漫/3C資訊的新聞媒體平台
+                  A media platform covering news about games, anime, and tech products.
                 </p>
               </div>
             </div>
             <div className='projectView-description-box'>
               <div className='profileView-description-text'>
                 <p>
-                  成果：
+                  Results:
                   <br />
-                  1. 跨裝置設計及切版，改善網頁易讀性
+                  1. Implemented responsive design for better readability.
                   <br />
-                  2. 優化前端效能，提升Google PageSpeed分數
-                  <br />
+                  2. Optimized front-end performance, improving PageSpeed.
                 </p>
               </div>
             </div>

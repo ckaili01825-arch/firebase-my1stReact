@@ -124,7 +124,7 @@ function ProjectView({ onClose }){
                         </div>
                         <div className='profileView-description-text'>
                             <p>
-                                Kirabase與Paradaily合作主題頁，提供Kirabase專屬資訊的平台空間。
+                                Kirabase x Paradaily collaboration news pages, providing exclusive Kirabase information.
                             </p>
                         </div>
                     </div>
@@ -132,8 +132,7 @@ function ProjectView({ onClose }){
 
                         <div className='profileView-description-text'>
                             <p>
-                                Kirabase：日系經營模式的偶像主題餐廳，旗下偶像會在餐廳內表演和粉絲服務。<br></br>
-                                也常跟知名IP例如三麗鷗合作餐點內容。<br></br>
+                            Kirabase is a Japanese-style themed restaurant famous for its idol waitress performances, with many popular IP collaborations like Sanrio.
                             </p>
                         </div>
                     </div>
