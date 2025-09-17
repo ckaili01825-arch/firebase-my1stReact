@@ -86,12 +86,12 @@ function About(){
             <p className="resume-title">About me</p>
             
                 <p  className='resume-paragraph'>
-                  Hi! I'm Kaili Chang. 
-                  I am a web designer and I have related working experiences in this field for over two years.
-                  I used to work as a web visual designer for a gaming news website company, and is familiar with figma prototyping, RWD responsive feature design and front-end coding.
-                  I have experience in increasing users website reading usabiliy and linger them in website for longer time. 
-                  I also have had the experience in effectively improving the news website optimization score in google pagespeed.
-                  I am capable of completing a website from design to coding by myself alone, and am also capable of the cross fields communication between project managers and programmers.
+                  Hi! I'm Kaili Chang, a web designer with over two years of experience. 
+                  I previously worked as a web visual designer for a gaming news website, 
+                  where I specialized in Figma prototyping, responsive design, 
+                  and front-end coding. I have improved website usability, \
+                  increased user engagement, and optimized site performance scores. 
+                  I’m capable of handling projects from design to coding independently, as well as collaborating effectively with project managers and developers.
                 </p>
           </div>
             <div className="resume-info-container">
@@ -206,8 +206,8 @@ function About(){
                             </ul>
                             <ul>
                                 <li>React</li>
-                                <li>WebGL</li>
                                 <li>WordPress</li>
+                                <li>Git</li>
                             </ul>
                         </div>
                             <p className='resume-subtitle'>Design APP</p>

@@ -46,7 +46,7 @@ function Home(){
                     <span className="word">to</span>
                     <span className="word">my</span>
                     <span className="word">portfolio</span>
-                    <span className="word">website</span>
+                    <span className="word">website.</span>
                   </p>
                 </div>
               <div className = "home-notification">

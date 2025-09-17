@@ -1,7 +1,13 @@
 import './ProjectView.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
+import PicSlider from '../PicSlider/PicSlider';
+import { useState } from 'react';
 function ProjectView({ onClose }){
+    const [showSlider, setShowSlider] = useState(false);
+    const handleProjectClick = () => {
+        setShowSlider(true); // 按下去顯示 PicSlider
+    };
     return(
         <>
         <div className='projectView-overlay'>
@@ -12,7 +18,7 @@ function ProjectView({ onClose }){
                     <div className='projectView-screen'>
                         <LazyLoadImage src='/fullpic-dragonGoddess-pc.png' alt='gaming landing page-freya' effect='opacity'/>
                     </div>
-                    <div className='projectView-fs-icon-wrap'>
+                    <div className='projectView-fs-icon-wrap' onClick={handleProjectClick}>
                             <div className='projectView-fs-icon'></div>
                     </div>
                     <div className='projectView-info'>
@@ -68,6 +74,12 @@ function ProjectView({ onClose }){
                 </div>
             </div>
         </div>
+        {showSlider && (
+             <PicSlider 
+            onClose={() => setShowSlider(false)} 
+            slideKey="dragonGoddess" 
+            />
+        )}
         </>
     );
 }

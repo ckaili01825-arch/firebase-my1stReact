@@ -68,34 +68,40 @@ return(
                 
                 <div className='cover-photo' onClick={()=>handleProjectClick("pandancake")}>
                     <LazyLoadImage src="PANDAN CAKE.png" alt="" effect='opacity'/>
+                    
                 </div>
                 <div className='cover-photo' onClick={()=>handleProjectClick("ebook")}>
                     <LazyLoadImage src="fullpic-ebook02.png" alt="" effect='opacity'/>
+                    <div className='multi-pages-icon-wrap'><div className='multi-pages-icon'></div></div>
                 </div>
                 <div className='cover-photo' onClick={()=>handleProjectClick("gameapp")}>
                     <LazyLoadImage src="fullpic-gameapp-tb.png" alt="" effect='opacity'/>
+                    <div className='multi-pages-icon-wrap'><div className='multi-pages-icon'></div></div>
                 </div>
             </div>
         </section>
         <section className='work-project'>
-            <div className='side-project-title'>
+            <div className='section-title'>
                 <div className='title-moving-space'>
-                    <h2>Work Project</h2>
+                    <h1>Work Project</h1>
                 </div>
 
             </div>
             <div className='side-project-gallery'>
                 <div className='cover-photo' onClick={()=>handleProjectClick("freya")}>
                     <LazyLoadImage src="fullpic-freya-pc.png" alt="" effect='opacity'/>
+                    <div className='multi-pages-icon-wrap'><div className='multi-pages-icon'></div></div>
                 </div>
                 <div className='cover-photo' onClick={()=>handleProjectClick("dragonGoddess")}>
                     <LazyLoadImage src="fullpic-dragonGoddess-pc.png" alt="" effect='opacity'/>
                 </div>
                 <div className='cover-photo' onClick={()=>handleProjectClick("paradaily")}>
                     <LazyLoadImage src="fullpic-para-pc.png" alt="" effect='opacity'/>
+                    <div className='multi-pages-icon-wrap'><div className='multi-pages-icon'></div></div>
                 </div>
                 <div className='cover-photo' onClick={()=>handleProjectClick("kirabase")}>
                     <LazyLoadImage src="fullpic-kiraIdol-pc.png" alt="" effect='opacity'/>
+                    <div className='multi-pages-icon-wrap'><div className='multi-pages-icon'></div></div>
                 </div>
             </div>
         </section>

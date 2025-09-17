@@ -127,9 +127,10 @@
     border-radius: 50%;
     width: 100%;
     aspect-ratio: 1;
-    background-image: url('../../assets/profile-pic.avif');
+    background-image: url('../../assets/profile-pic.webp');
     background-position: center center;
     background-size: cover;
+    background-color: rgb(224, 224, 224);
 
 }
 
@@ -216,6 +217,7 @@
 }
 .resume-project{
     padding-bottom: 20px;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -226,6 +228,7 @@
     position: relative;
     border-radius: 10px;
     border: 1px solid rgba(14, 69, 74, 0.1);
+        background-color: rgb(224, 224, 224);
    
 }
 .resume-project-cover .lazy-load-image-background {

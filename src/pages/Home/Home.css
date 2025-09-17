@@ -153,16 +153,13 @@
      
 }
 .home-profile-photo{
-    /*
-    background-color: rgb(96, 155, 155);
-    */
     border-radius: 50%;
     width: 100%;
     aspect-ratio: 1;
-    background-image: url('../../assets/profile-pic.avif');
+    background-image: url('../../assets/profile-pic.webp');
     background-position: center center;
     background-size: cover;
-
+    background-color: rgb(224, 224, 224);
 }
 
 .home-info-row{
